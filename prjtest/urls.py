@@ -19,5 +19,7 @@ from testapp import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', views.index),
+    url(r'^$', views.index, name='home'),
+    url(r'^add/$', views.add1, name='add'),
+    url(r'^newadd/(\d+)/(\d+)/$', views.add2, name='add2'),
 ]
